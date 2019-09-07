@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
         bestFuelImg = findViewById(R.id.bestFuelImg);
         SeekBar gasolineSeekBar = findViewById(R.id.gasolineSeekBar);
         SeekBar ethanolSeekBar = findViewById(R.id.ethanolSeekBar);
+        gasolinePriceTextView.setText(currencyFormat.format(gasolineSeekBar.getProgress() / 100D));
+        ethanolPriceTextView.setText(currencyFormat.format(ethanolSeekBar.getProgress() / 100D));
         gasolineSeekBar.setOnSeekBarChangeListener(onGasolineSeekBarChangeListener);
         ethanolSeekBar.setOnSeekBarChangeListener(onEthanolSeekBarChangeListener);
     }
