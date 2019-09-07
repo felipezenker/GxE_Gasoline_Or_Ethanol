@@ -52,10 +52,12 @@ public class MainActivity extends AppCompatActivity {
             if(ethanolPrice / gasolinePrice > 0.7)
             {
                 bestFuel.setText(getString(R.string.gasoline));
+                bestFuelImg.setImageResource(R.drawable.gasoline);
             }
             else
             {
                 bestFuel.setText(getString(R.string.ethanol));
+                bestFuelImg.setImageResource(R.drawable.ethanol);
             }
         }
     };
