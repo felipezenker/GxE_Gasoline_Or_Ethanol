@@ -16,6 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_row="0"
+        android:layout_rowSpan="2"
         android:layout_column="0"
         android:layout_columnSpan="2"
         android:layout_gravity="fill_horizontal"
@@ -25,35 +26,64 @@
         android:text="@string/app_name"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="35sp" />
+        android:textSize="@dimen/titleSize"/>
 
     <TextView
         android:id="@+id/gasolinePriceTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_row="1"
-        android:layout_columnSpan="1"
         android:layout_gravity="right|center_vertical"
         android:gravity="center_horizontal" />
 
     <SeekBar
-        android:id="@+id/seekBar_gasoline"
+        android:id="@+id/gasolineSeekBar"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/seekBar_height"
         android:layout_gravity="fill_horizontal"
-        android:layout_columnSpan="1"/>
+        android:max="500"
+        android:progress="250"/>
 
     <TextView
         android:id="@+id/ethanolPriceTextView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:gravity="center_horizontal" />
 
     <SeekBar
-        android:id="@+id/seekBar_ethanol"
+        android:id="@+id/ethanolSeekBar"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/seekBar_height"
         android:layout_gravity="fill_horizontal"
-        android:layout_columnSpan="1" />
+        android:max="500"
+        android:progress="250"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="3"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill_horizontal"
+        android:hint="@string/choiceTitle"
+        android:textColorHint="@android:color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/bestFuel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:text="@string/choice"
+            android:textAlignment="center"
+            android:textSize="25sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/bestFuelImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="2"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/gasoline" />
 
 
 </GridLayout>

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">GxE - Gasoline Or Ethanol</string>
+    <string name="choiceTitle">It\'s better use:</string>
+    <string name="choice">Set fuel prices to calculate</string>
+    <string name="gasoline">GASOLINE</string>
+    <string name="ethanol">ETHANOL</string>
 </resources>
